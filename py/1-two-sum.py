@@ -9,7 +9,8 @@ class Solution(object):
         i = 0
         for x in nums:
             lookfor = target - x
-            if dic.has_key(lookfor):
+            #if dic.has_key(lookfor):
+            if lookfor in dic:
                 return [dic.get(lookfor),i]
             else:
                 dic.update({nums[i]:i})
